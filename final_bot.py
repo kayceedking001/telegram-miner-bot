@@ -15,8 +15,13 @@ from collections import defaultdict
 # CONFIGURATION
 # ============================================
 TOKEN = "8663428877:AAFjYaQs7TyRajIGhR3kA8wdsqSVwcdlybw"
-SAVE_FILE = "bot_complete_data.json"
+SAVE_FILE = "/app/data/bot_complete_data.json"  # Railway volume path
 
+# Create directory if it doesn't exist
+import os
+os.makedirs(os.path.dirname(SAVE_FILE), exist_ok=True)
+
+print(f"💾 Data will be saved to: {SAVE_FILE}")
 # ============================================
 # YOUR FILE IDs
 # ============================================
